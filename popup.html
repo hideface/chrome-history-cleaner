@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>방문 기록 삭제 설정</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <h1>전체 기간 기록 삭제</h1>
+      <p class="summary">로그인 상태는 유지하고 방문·검색 기록, 양식 기록, 캐시와 다운로드 목록을 삭제합니다.</p>
+
+      <label class="setting">
+        <input id="clearOnLastWindowClosed" type="checkbox">
+        <span>마지막 Chrome 창을 닫을 때 삭제</span>
+      </label>
+
+      <label class="setting">
+        <input id="clearOnStartup" type="checkbox">
+        <span>Chrome 시작 시 이전 기록 다시 정리</span>
+      </label>
+
+      <button id="clearNow" type="button">다시 삭제</button>
+      <p id="status" role="status" aria-live="polite"></p>
+
+      <p class="note">쿠키, 비밀번호, 사이트 저장공간과 다운로드한 실제 파일은 유지합니다. 북마크와 검색엔진의 실시간 추천어도 삭제하지 않습니다.</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
